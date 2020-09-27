@@ -11,4 +11,3 @@ export declare function UTC(
   millisecond: f64
 ): f64;
 export declare function now(): f64;
-export declare function getTimezoneOffset(): i32;

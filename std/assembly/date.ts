@@ -1,7 +1,6 @@
 import {
   UTC as Date_UTC,
   now as Date_now,
-  getTimezoneOffset as Date_getTimezoneOffset
 } from "./bindings/Date";
 
 import {
@@ -42,7 +41,7 @@ export class Date {
 
   constructor(value: i64) {
     this.value = value;
-    this.timeZone = new TimeZone("GMT", Date_getTimezoneOffset());
+    this.timeZone = TimeZone.UTC_TIME_ZONE;
     this.localDate = getCalendarDate(new CalendarDate(this.value, this.timeZone), this.value);
     this.utcDate = getCalendarDate(new CalendarDate(this.value, TimeZone.UTC_TIME_ZONE), this.value);
   }
@@ -253,9 +252,5 @@ export class Date {
     var cdate = this.getUTCCalendarDate();
     setMilliseconds(cdate, milliseconds);
     return this.setTime(cdate.millis);
-  }
-
-  getTimezoneOffset(): i32 {
-    return Date_getTimezoneOffset();
   }
 }

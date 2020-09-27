@@ -1585,8 +1585,6 @@ declare class Date {
   /** Constructs a new date object from an UTC timestamp in milliseconds. */
   constructor(value: i64);
   /** Returns the time zone difference, in minutes, from current locale(host system settings) to UTC. */
-  getTimezoneOffset(): i32;
-  /** Returns the UTC timestamp of this date in milliseconds. */
   getTime(): i64;
   /** Sets the UTC timestamp of this date in milliseconds. */
   setTime(value: i64): i64;
