@@ -1,8 +1,6 @@
-Compiler frontend for node.js
-=============================
+# Compiler frontend for node.js
 
-Usage
------
+## Usage
 
 For an up to date list of available command line options, see:
 
@@ -10,13 +8,12 @@ For an up to date list of available command line options, see:
 $> asc --help
 ```
 
-API
----
+## API
 
 The API accepts the same options as the CLI but also lets you override stdout and stderr and/or provide a callback. Example:
 
 ```js
-const asc = require("assemblyscript/cli/asc");
+const asc = require("@minar-kotonoha/assemblyscript/cli/asc");
 asc.ready.then(() => {
   asc.main([
     "myModule.ts",
@@ -38,14 +35,14 @@ asc.ready.then(() => {
 Available command line options can also be obtained programmatically:
 
 ```js
-const options = require("assemblyscript/cli/asc.json");
+const options = require("@minar-kotonoha/assemblyscript/cli/asc.json");
 ...
 ```
 
 You can also compile a source string directly, for example in a browser environment:
 
 ```js
-const asc = require("assemblyscript/cli/asc");
+const asc = require("@minar-kotonoha/assemblyscript/cli/asc");
 asc.ready.then(() => {
   const { binary, text, stdout, stderr } = asc.compileString(`...`, { optimize: 2 });
 });

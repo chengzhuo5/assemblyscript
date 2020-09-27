@@ -78,7 +78,7 @@ var assemblyscript;
 var isDev = false;
 (function loadAssemblyScript() {
   try {
-    assemblyscript = require("assemblyscript");
+    assemblyscript = require("@minar-kotonoha/assemblyscript");
   } catch (e) {
     try { // `asc` on the command line
       assemblyscript = dynrequire("../dist/assemblyscript.js");

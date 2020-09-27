@@ -1,5 +1,5 @@
 {
-  "name": "assemblyscript",
+  "name": "@minar-kotonoha/assemblyscript",
   "description": "Definitely not a TypeScript to WebAssembly compiler.",
   "keywords": [
     "typescript",
@@ -8,7 +8,7 @@
     "assemblyscript",
     "wasm"
   ],
-  "version": "0.14.11-date",
+  "version": "0.14.11-date-fix",
   "author": "Daniel Wirtz <dcode+assemblyscript@dcode.io>",
   "contributors": [],
   "license": "Apache-2.0",
